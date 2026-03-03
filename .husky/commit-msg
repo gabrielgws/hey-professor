@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
 
 # Cores
 NC='\033[0m'
@@ -16,9 +15,10 @@ if [ -z "$ISSUE_ID" ]; then
     exit 1
 fi
 
-# i.g. HEY-1: HEY-1: my feature
+# Se já contém o ISSUE_ID em qualquer lugar, deixa passar
 if [ "${COMMIT_MESSAGE%%$ISSUE_ID*}" != "$COMMIT_MESSAGE" ]; then
     exit 0
 fi
 
-echo "$ISSUE_ID: $COMMIT_MESSAGE" >$1
+# Prefixa a mensagem com ISSUE_ID
+echo "$ISSUE_ID: $COMMIT_MESSAGE" > "$1"
