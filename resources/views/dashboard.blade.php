@@ -12,7 +12,7 @@
                     <div class="text-gray-900 dark:text-gray-100">
                         {{ __("You're logged in!") }}
                     </div>
-                    <form action="{{ route('question.store') }}" method="POST" class="max-w-sm mx-auto">
+                    <form action="{{ route('question.store') }}" method="POST" class="mt-9">
                         @csrf
                         <div class="mb-4">
                             <label for="question" class="block mb-2.5 text-sm font-medium text-heading">
