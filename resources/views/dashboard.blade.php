@@ -12,7 +12,7 @@
                     {{ __("You're logged in!") }}
                 </div>
 
-                <x-form post :action="route('question.store')">
+                <x-form :action="route('question.store')" class="mt-8">
                     <x-textarea label="Question" name="question" />
 
                     <x-btn.primary> Save </x-btn.primary>
