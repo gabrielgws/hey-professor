@@ -27,20 +27,20 @@ class Question extends Model
     /**
      * @return Attribute<int, never>
      */
-    public function likes(): Attribute
-    {
-        return new Attribute(
-            get: fn (): int => (int) $this->votes()->sum('like')
-        );
-    }
-
-    /**
-     * @return Attribute<int, never>
-     */
-    public function unlikes(): Attribute
-    {
-        return new Attribute(
-            get: fn (): int => (int) $this->votes()->sum('unlike')
-        );
-    }
+    //    public function likes(): Attribute
+    //    {
+    //        return new Attribute(
+    //            get: fn (): int => (int) $this->votes()->sum('like')
+    //        );
+    //    }
+    //
+    //    /**
+    //     * @return Attribute<int, never>
+    //     */
+    //    public function unlikes(): Attribute
+    //    {
+    //        return new Attribute(
+    //            get: fn (): int => (int) $this->votes()->sum('unlike')
+    //        );
+    //    }
 }
